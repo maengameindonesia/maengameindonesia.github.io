@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-detail-page">
+  
+  <div class="toolbar">
+    <a href="index.html" class="logo-link">
+      <img src="dmvs7.png" alt="Logo" class="site-logo" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="rules.html">Aturan Main</a>
+      <a href="contact.html">Hubungi Kami</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <button id="back-button" onclick="goBack()">Kembali</button>
+    
+    <!-- Image appears first -->
+    <img id="game-image" class="game-image" src="" alt="Game Image">
+
+    <!-- Title now appears below image -->
+    <h1 id="game-title" class="detail-title"></h1>
+
+    <div class="highlight-box">      
+      <p>Dapatkan hingga: <strong id="total-earning"></strong></p>
+      <p>Pembayaran dalam: <strong><span id="dead-line"></span></strong></p>
+      <button id="request-play" class="play-button" onclick="submitForm()">Pilih permainan ini</button>
+      <p>ID: <strong><span id="game-id"></span></strong></p>
+    </div>
+
+    <p><strong>Deskripsi:</strong> <span id="game-description"></span></p>
+    <p><strong>Insentif:</strong></p>
+    <ul id="game-rewards"></ul>
+
+  </div>
+
+<script>
+  function submitForm() {
+    if (selectedGame) {
+      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSeGccAmYmYspWKp9P4JfL5FSVsPMwR3DSF8-8dAKEcowVMHXg/viewform?usp=pp_url&entry.535570132=${encodeURIComponent(selectedGame.id)}&entry.1884593318=${encodeURIComponent(selectedGame.title)}`;
+      window.open(formUrl, '_blank');
+    } else {
+      alert("Data game tidak ditemukan. Silakan kembali dan coba lagi.");
+    }
+  }
+
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+  <script src="script.js"></script>
+  
+  <footer class="site-footer">
+  <div class="footer-container">
+     
+  <div class="footer-links">
+    <a href="about.html">Tentang Kami</a>
+    <a href="terms.html">Syarat dan Ketentuan</a>
+    <a href="privacy.html">Kebijakan Privasi</a>
+  </div>
+
+  <div class="footer-branding">
+    © 2025, DMVS. All Rights Reserved. | Developed by the MGI Team
+  </div>
+
+  </div>
+</footer>
+  
+</body>
+</html>

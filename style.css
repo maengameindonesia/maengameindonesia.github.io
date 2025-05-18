@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.container h2 {
+  color: #70b8ff;
+  margin: 2rem 0 1rem;
+  font-size: 1.4rem;
+}
+
+.container h3 {
+  color: #ccc;
+  margin: 1.5rem 0 0.8rem;
+  font-size: 1.1rem;
+}
+
+.container p, 
+.container ul {
+  margin-bottom: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.container ul {
+  padding-left: 1.5rem;
+}
+
+.container li {
+  margin-bottom: 0.5rem;
+}
+
+#game-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.game-card {
+  background-color: #0d1b2a; /* Dark navy blue */
+  padding: 15px;
+  border: 1px solid #1b263b; /* Slightly lighter blue for border */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.toolbar {
+  background-color: #0d0d1a;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.site-logo {
+  height: 36px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #70b8ff;
+}
+
+.site-footer {
+  background-color: #111827;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid #2c2c2c;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-branding {
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  background-color: #111827;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.rules-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem; /* space between text and image */
+  padding: 2rem 0;
+  flex-wrap: wrap; /* responsive on smaller screens */
+}
+
+.rules-text {
+  flex: 2;
+  min-width: 300px;
+  padding: 0 0rem; /* Adds 1rem padding left and right */
+  max-width: 500px; or any size you prefer */
+}
+
+.rules-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.rules-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* optional: make image look nicer */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Mobile responsive: stack footer links vertically */
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-branding {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rules-section {
+    flex-direction: column;
+  }
+
+  .rules-image {
+    margin-top: 0rem;
+    min-width: 250px;
+   /*  max-width: 480px; adjust this value as needed */
+  }
+
+  .rules-image img {
+    width: 100%;
+  /*  max-width: 400px;  adjust this value as needed */
+    height: auto;
+    display: block;
+  }
+}
+
+
+.game-card:hover {
+  transform: translateY(-4px);
+}
+
+.game-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.game-detail-page .container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.game-image {
+  width: 100%;
+  height: auto; /* Controls vertical size */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.max-earning {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.play-button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.0rem; /* slightly bigger than default */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #2980b9;
+}
+
+.highlight-box {
+  background-color: #2e2e2e; /* dark grey but not too dark */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-box p {
+  margin: 0.4rem 0;
+}
+
+.highlight-box .play-button {
+  margin: 1.0rem 0;
+}
+
+
+
+#game-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* For the Game Detail page image */
+#game-image {
+  width: 80%; /* Set a smaller width */
+  max-width: 400px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#game-description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+#game-rewards {
+  list-style-type: none;
+  margin-bottom: 20px;
+  padding-left: 0;
+  color: #ccc;
+}
+
+#game-rewards li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+#back-button {
+  background: none;
+  border: none;
+  color: #fff; /* or any text color you prefer */
+  font-size: 1.2rem;
+  text-decoration: none; /* removes underline */
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#back-button::before {
+  content: "←";
+  margin-right: 8px;
+  text-decoration: none; /* removes underline */
+  font-size: 1.3rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #game-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #game-list {
+    grid-template-columns: 1fr;
+  }
+}
