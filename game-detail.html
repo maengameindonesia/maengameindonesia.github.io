@@ -44,13 +44,15 @@
 <script>
   function submitForm() {
     if (selectedGame) {
-      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSeGccAmYmYspWKp9P4JfL5FSVsPMwR3DSF8-8dAKEcowVMHXg/viewform?usp=pp_url&entry.535570132=${encodeURIComponent(selectedGame.id)}&entry.1884593318=${encodeURIComponent(selectedGame.title)}`;
+      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSe9FP9ToVIZ30jprRuw_Ix0eNNZWDbdISfHMCONqFrjWNB8sA/viewform?usp=pp_url&entry.1065046570=${encodeURIComponent(selectedGame.id)}&entry.1166974658=${encodeURIComponent(selectedGame.title)}`;
       window.open(formUrl, '_blank');
     } else {
       alert("Data game tidak ditemukan. Silakan kembali dan coba lagi.");
     }
   }
 
+  
+  
   function goBack() {
     window.history.back();
   }
